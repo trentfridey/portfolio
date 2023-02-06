@@ -1,0 +1,50 @@
+[
+    {
+        "name": "sunsettr",
+        "tools": [
+            "typescript",
+            "react",
+            "expo"
+        ],
+        "preview": "/sunsettr-preview.png",
+        "description": "A mobile app that shows the sunrise and sunset times at your location",
+        "src": "https://github.com/trentfridey/suncycle-app",
+        "site": "https://play.google.com/store/apps/details?id=org.tfri.sunsettr&hl=en_US&gl=US"
+    },
+    {
+        "name": "Pokedex",
+        "tools": [
+            "vue",
+            "graphql",
+            "css"
+        ],
+        "preview": "/pokedex-preview.gif",
+        "description": "An example Vue front-end for a GraphQL backend, with search, filter, and the ability to save favorites",
+        "src": "https://github.com/trentfridey/vue-typescript-graphql-example",
+        "site": ""
+    },
+    {
+        "name": "Wordle Clone",
+        "tools": [
+            "typescript",
+            "react",
+            "css"
+        ],
+        "preview": "/wordle-preview.gif",
+        "description": "A clone of the famous Wordle game. New word everyday.",
+        "src": "https://github.com/trentfridey/wordle-clone",
+        "site": "https://trentfridey.github.io/wordle-clone/"
+    },
+    {
+        "name": "Wave Simulator",
+        "tools": [
+            "rust",
+            "webassembly",
+            "javascript"
+        ],
+        "preview": "/rust-waves-preview.gif",
+        "description": "Simulates water waves in the browser by implementing a finite-difference algorithm",
+        "src": "https://github.com/trentfridey/rust-waves",
+        "site": "https://trentfridey.github.io/rust-waves/"
+    }
+]
