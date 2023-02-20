@@ -3,15 +3,16 @@
     <h1>Trent Fridey &mdash; Portfolio</h1>
     <div>
       <a href="https://github.com/trentfridey">
-        <img src="/github.svg" width="24" height="24" style="margin-right: 15px" />
+        <img src="icons/github.svg" width="24" height="24" style="margin-right: 15px" />
       </a>
       <a href="https://linkedin.com/in/trentfridey">
-        <img src="/linkedin.svg" width="24" height="24" />
+        <img src="icons/linkedin.svg" width="24" height="24" />
       </a>
     </div>
   </main>
   <hr />
   <section>
+  <h2>Personal Projects</h2>
     <div v-for="project in projects" class="card">
       <div>
         <a :href="`${project.site || project.src}`" class="preview">
@@ -25,7 +26,7 @@
         <div class="project-description">{{ project.description }}</div>
         <div class="tools">
           <div class="tool" v-for="tool in project.tools">
-            <img :src="`/${tool}.svg`" width="20" style="margin-right: 8px" />
+            <img :src="`icons/${tool}.svg`" width="20" style="margin-right: 8px" />
             <span class="tool-name">{{ tool }}</span>
           </div>
         </div>
@@ -37,7 +38,7 @@
 <style scoped></style>
 
 <script>
-import projects from "./projects.json";
+import projects from './projects.json';
 
 export default {
   name: "App",
@@ -131,10 +132,10 @@ section {
   background: #f4f4f4;
   box-shadow: -4px 4px 8px #dedede, 4px -4px 8px #ffffff;
   border: 1px solid black;
-  padding: 2px 5px;
+  padding: 5px 5px;
   display: inline-block;
   height: 25px;
-  margin: 3px 3px;
+  margin: 0px 10px 10px 0;
 }
 .tool-name {
   font-size: 14px;
