@@ -69,7 +69,7 @@
         <input name="date" type="hidden" :value="Date()" />
         <input placeholder="name" name="name" />
         <input placeholder="email" name="email" />
-        <textarea placeholder="message"></textarea>
+        <textarea placeholder="message" name="message"></textarea>
         <button class="submit-btn" type="submit">Submit</button>
       </form>
     </div>
