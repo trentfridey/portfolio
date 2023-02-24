@@ -1,5 +1,19 @@
 [
     {
+        "name": "The Derivation",
+        "tools": [
+            "css",
+            "hugo",
+            "graphql",
+            "javascript",
+            "faunadb"
+        ],
+        "preview": "/blog-preview.png",
+        "description": "Personal blog on analytical topics",
+        "src": "https://github.com/trentfridey/blog",
+        "site": "https://blog.trentfridey.com"
+    },
+    {
         "name": "sunsettr",
         "tools": [
             "typescript",
@@ -46,19 +60,5 @@
         "description": "Simulates water waves in the browser by implementing a finite-difference algorithm",
         "src": "https://github.com/trentfridey/rust-waves",
         "site": "https://trentfridey.github.io/rust-waves/"
-    },
-    {
-        "name": "The Derivation",
-        "tools": [
-            "css",
-            "hugo",
-            "graphql",
-            "javascript",
-            "faunadb"
-        ],
-        "preview": "/blog-preview.png",
-        "description": "Personal blog on analytical topics",
-        "src": "https://github.com/trentfridey/blog",
-        "site": "https://blog.trentfridey.com"
     }
 ]
