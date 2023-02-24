@@ -261,7 +261,7 @@ section {
   flex: none;
   border-radius: 12px;
   display: inline-block;
-  height: 25px;
+  height: 32px;
   filter: grayscale(1);
   padding: 2px 15px 2px 12px;
   margin: 2px;
@@ -275,12 +275,15 @@ section {
 #contact {
   background-color: rgb(37, 37, 37);
   color: #efefea;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 120px);
   padding: 40px 40px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
+  & > * {
+    flex: 0 1 440px;
+  }
 }
 form {
   display: flex;
@@ -288,24 +291,23 @@ form {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: flex-start;
-  width: 420px;
 }
 textarea {
   background-color: rgb(37, 37, 37);
   border: 1.4px solid #efefea;
-  border-radius: 6px;
+  border-radius: 11px;
   color: #efefea;
   font-family: "Inter";
   padding: 10px;
   resize: none;
   height: 200px;
-  width: 400px;
   margin: 10px 0;
+  width: 100%;
 }
 input {
   background-color: rgb(37, 37, 37);
   border: 1.4px solid #efefea;
-  border-radius: 6px;
+  border-radius: 11px;
   color: #efefea;
   font-family: "Inter";
   padding: 10px;
@@ -323,5 +325,26 @@ input {
   margin-top: 10px;
   align-self: flex-end;
   font-weight: 800;
+  translate: 0;
+  transition: all 0.25s;
+  &:hover {
+    box-shadow: -6px 6px 0px 0px #efefeaaa;
+    translate: 6px -6px;
+  }
+  &:active {
+    translate: 2px -2px;
+    box-shadow: -2px 2px 0 0 #efefeaaa;
+  }
+}
+@media screen and (max-device-width: 812px)  {
+    h1 {
+      font-size: 24px;
+      letter-spacing: normal;
+      font-weight: 300;
+      line-height: 24px;
+    }
+    .card + .card {
+      margin-left: 0;
+    }
 }
 </style>
