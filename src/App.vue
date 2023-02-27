@@ -103,7 +103,7 @@ header {
   position: sticky;
   height: var(--header-height);
   top: calc(var(--header-inner-height) - var(--header-height));
-  border-bottom: 1.4px solid black;
+  border-bottom: 1.4px solid rgb(37, 37, 37);
   z-index: 100;
   background-color: #efefea;
 }
