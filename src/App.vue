@@ -24,7 +24,7 @@
           <a :href="`${project.src}`"
             ><img
               style="vertical-align: text-top"
-              src="/src/assets/icons/github.svg"
+              src="/icons/github.svg"
               width="28"
               height="28"
           /></a>
@@ -38,7 +38,7 @@
           <div class="tools">
             <div class="tool" v-for="tool in project.tools">
               <img
-                :src="`/src/assets/icons/${tool}.svg`"
+                :src="`/icons/${tool}.svg`"
                 :alt="tool"
                 width="20"
                 style="vertical-align: text-top; margin-right: 8px"
@@ -57,7 +57,7 @@
       <div style="margin: auto">
         <a href="https://linkedin.com/in/trentfridey" style="color: #efefea"><img
           style="vertical-align: middle; margin-right: 20px"
-          src="/src/assets/icons/linkedin.svg"
+          src="/icons/linkedin.svg"
         /></a>
         <a href="https://linkedin.com/in/trentfridey" style="color: #efefea">linkedin.com/in/trentfridey</a>
       </div>
