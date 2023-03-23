@@ -60,5 +60,17 @@
         "description": "Simulates water waves in the browser by implementing a finite-difference algorithm",
         "src": "https://github.com/trentfridey/rust-waves",
         "site": "https://trentfridey.github.io/rust-waves/"
+    },
+    {
+        "name": "Hopfield Network",
+        "tools": [
+            "typescript",
+            "tensorflow",
+            "react"
+        ],
+        "preview": "/hopfield-network-preview.png",
+        "description": "Train a machine learning model to memorize and recall simple patterns",
+        "src": "https://github.com/trentfridey/hopfield-networks",
+        "site": "https://trentfridey.github.io/hopfield-networks"
     }
 ]
