@@ -14,16 +14,16 @@
         "site": "https://blog.trentfridey.com"
     },
     {
-        "name": "sunsettr",
+        "name": "QuTiP Virtual Lab",
         "tools": [
-            "typescript",
+            "python",
             "react",
-            "expo"
+            "webassembly"
         ],
-        "preview": "/sunsettr-preview.png",
-        "description": "A mobile app that shows the sunrise and sunset times at your location",
-        "src": "https://github.com/trentfridey/suncycle-app",
-        "site": "https://play.google.com/store/apps/details?id=org.tfri.sunsettr&hl=en_US&gl=US"
+        "preview": "/qutip-virtual-lab-preview.png",
+        "description": "Runs the QuTiP Python package in the browser using WebAssembly",
+        "src": "https://github.com/qutip/qutip-virtual-lab",
+        "site": "https://qutip.org/qutip-virtual-lab"
     },
     {
         "name": "Pokedex",
