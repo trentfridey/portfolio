@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Artwork"
+   viewBox="0 0 135.04 151.12"
+   version="1.1"
+   sodipodi:docname="tensorflow.svg"
+   width="135.03999"
+   height="151.12"
+   inkscape:version="1.3.2 (1:1.3.2+202311252150+091e20ef0f)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.8674555"
+     inkscape:cx="-12.851712"
+     inkscape:cy="74.700574"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Artwork" />
+  <defs
+     id="defs2">
+    <style
+       id="style1">.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:url(#linear-gradient);}.cls-4{clip-path:url(#clip-path-2);}.cls-5{fill:url(#linear-gradient-2);}.cls-6{fill:#425066;}</style>
+    <clipPath
+       id="clip-path">
+      <polygon
+         class="cls-1"
+         points="337.47,75.72 337.47,226.84 363.25,211.88 363.25,169.36 382.72,180.63 382.61,151.54 363.25,140.48 363.25,123.59 402.09,146.03 402,112.59 "
+         id="polygon1" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient"
+       x1="261.17999"
+       y1="151.10001"
+       x2="419.64999"
+       y2="151.10001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ff6f00"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#ffa800"
+         id="stop2" />
+    </linearGradient>
+    <clipPath
+       id="clip-path-2">
+      <polygon
+         class="cls-1"
+         points="331.67,75.72 331.67,226.84 305.89,211.88 305.89,123.59 267.05,146.03 267.14,112.59 "
+         id="polygon2" />
+    </clipPath>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="260.10999"
+       y1="151.10001"
+       x2="418.57999"
+       y2="151.10001"
+       xlink:href="#linear-gradient" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linear-gradient"
+       id="linearGradient12"
+       gradientUnits="userSpaceOnUse"
+       x1="261.17999"
+       y1="151.10001"
+       x2="419.64999"
+       y2="151.10001" />
+  </defs>
+  <title
+     id="title2">FullColorPrimary Vertical</title>
+  <g
+     class="cls-2"
+     clip-path="url(#clip-path)"
+     id="g2"
+     transform="translate(-267.05,-75.72)">
+    <rect
+       class="cls-3"
+       x="261.17999"
+       y="75.169998"
+       width="158.47"
+       height="151.86"
+       id="rect2"
+       style="fill:url(#linearGradient12)" />
+  </g>
+  <g
+     class="cls-4"
+     clip-path="url(#clip-path-2)"
+     id="g3"
+     transform="translate(-267.05,-75.72)">
+    <rect
+       class="cls-5"
+       x="260.10999"
+       y="75.169998"
+       width="158.47"
+       height="151.86"
+       id="rect3"
+       style="fill:url(#linear-gradient-2)" />
+  </g>
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>FullColorPrimary Vertical</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

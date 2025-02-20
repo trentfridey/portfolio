@@ -852,6 +852,16 @@ vue-demi@*:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"
   integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
 
+vue-marquee-slider@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vue-marquee-slider/-/vue-marquee-slider-1.0.6.tgz#776aa884cdc4af36da773f2109402bfa6d7a8a80"
+  integrity sha512-0ar9QpMtx8M5Zu4ih10b+zeHaLXxjv3qztjgM2LtG5gnfeo+HnBeDED7HqmAZba0qup5chdIcVtDW4kVGgAa1g==
+
+vue3-marquee@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/vue3-marquee/-/vue3-marquee-4.2.2.tgz#e5316591e5412931856d5a7e5aa2b34be4388673"
+  integrity sha512-FeFvGUVInKfFilXFcnl8sDRBJBZCZSNLlQDquJErB9db6W2xICRVqbRV/jtdzsEP0rftarLQhx9MeEAU0+TPuQ==
+
 vue@^3.2.45:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"

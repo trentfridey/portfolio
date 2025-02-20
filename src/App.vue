@@ -1,23 +1,30 @@
 <template>
   <header>
-    <div class="header-inner">
-      <h1>
-        Trent&nbsp;Fridey
-      // software engineer
-      </h1>
-      
+    <div class="header-light">
+      <h1>Trent&nbsp;Fridey</h1>
+    </div>
+    <div class="header-dark">
+      <h1>software&nbsp;engineer</h1>
     </div>
   </header>
+  <section id="summary">
+    <div class="tag-line">
+      Software engineering<br/> 
+      from<img src="/ctrl-z.svg" style="height:72px;margin-left:20px"/><br/>
+      experience.
+      <br/>
+    </div>
+  </section>
   <section>
     <div className="cards">
       <div
         v-for="(project, idx) in projects"
         class="card"
         v-motion
+        visible-once
         :initial="{ opacity: 0, y: 100 }"
         :enter="{ opacity: 1, y: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
-        :delay="200 + 100 * idx"
       >
         <div class="card-header">
           <a :href="`${project.site}`" class="h2">{{ project.name }}</a>
@@ -51,19 +58,12 @@
       </div>
     </div>
   </section>
+  <vue-3-marquee id="marquee-slider" direction="reverse" duration="5" :clone="true">
+      <img src="/ctrl-z.svg" style="height: 74px; margin: 0px 10px 10px 0" />
+    </vue-3-marquee>
   <section id="contact">
-    <div>
-      <h3>Social</h3>
-      <div style="margin: auto">
-        <a href="https://linkedin.com/in/trentfridey" style="color: #efefea"><img
-          style="vertical-align: middle; margin-right: 20px"
-          src="/icons/linkedin.svg"
-        /></a>
-        <a href="https://linkedin.com/in/trentfridey" style="color: #efefea">linkedin.com/in/trentfridey</a>
-      </div>
-    </div>
     <div class="contact-form">
-      <h3>Contact Me</h3>
+      <h3>Say Hello</h3>
       <form data-netlify="true" name="contact" method="post">
         <input name="form-name" type="hidden" value="contact" />
         <input name="date" type="hidden" :value="Date()" />
@@ -79,8 +79,7 @@
 <style scoped></style>
 
 <script>
-import projects from './projects.json';
-
+import projects from "./projects.json";
 export default {
   name: "App",
   computed: {
@@ -93,8 +92,8 @@ export default {
 
 <style lang="scss">
 :root {
-  --header-height: 120px;
-  --header-inner-height: 120px;
+  --header-height: 48px;
+  --header-inner-height: 48px;
   font-family: "Inter";
 }
 header {
@@ -105,22 +104,40 @@ header {
   top: calc(var(--header-inner-height) - var(--header-height));
   border-bottom: 1.4px solid rgb(37, 37, 37);
   z-index: 100;
-  background-color: #efefea;
-}
-.header-inner {
-  height: var(--header-inner-height);
-  position: sticky;
-  top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+}
+.header-light {
   padding: 0 20px;
+  height: var(--header-inner-height);
+  background: #efefea;
+  color: rgb(37, 37, 37);
+  text-align: right;
+  border-bottom: 1.4px solid rgb(37, 37, 37);
+  line-height: var(--header-inner-height);
+}
+.header-dark {
+  flex: 1 0 auto;
+  padding: 0 20px;
+  text-align: left;
+  height: var(--header-inner-height);
+  line-height: var(--header-inner-height);
+  background: rgb(37, 37, 37);
+  color: #efefea;
+}
+#summary {
+  margin-bottom: 300px;
+  display: flex;
   align-items: center;
 }
-.header-box {
-  border-radius: 8px;
-  padding: 20px;
-  margin-left: 40px;
+.tag-line {
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 90px;
+  letter-spacing: -5px;
+  line-height: 90px;
+  padding: 0 0 0 60px;
+  width: 660px;
+  flex: 1 0 auto;
 }
 hr {
   margin: 0;
@@ -135,14 +152,12 @@ a {
 h1 {
   font-family: "Inter";
   display: inline;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
-  font-size: 64px;
-  color: rgb(37, 37, 37);
+  font-size: 24px;
   text-transform: lowercase;
-  letter-spacing: -4px;
-  line-height: 52px;
-  background-color: #efefea;
+  letter-spacing: -1px;
+  line-height: var(--header-height);
 }
 h2 {
   font-family: "Inter";
@@ -158,13 +173,13 @@ h2 {
 h3 {
   font-family: "Inter";
   font-weight: 800;
-  margin: 0;
-  font-size: 18px;
+  margin: 0 0 16px 0;
+  font-size: 88px;
   color: #efefea;
-  text-transform: lowercase;
-  letter-spacing: -1px;
-  line-height: 30px;
+  letter-spacing: -5px;
+  line-height: 88px;
   background-color: rgb(37, 37, 37);
+  padding: 20px 20px;
 }
 .h2 {
   margin: 0;
@@ -175,7 +190,8 @@ h3 {
   text-transform: lowercase;
 }
 section {
-  padding: 0px 10px 400px 10px;
+  min-height: calc(100vh - var(--header-height));
+  margin-bottom: 300px;
 }
 .sidebar {
   width: 50px;
@@ -196,7 +212,6 @@ section {
   flex: none;
   width: 300px;
   margin: 30px 0;
-  border-radius: 11px;
   background: #efefea;
   border: 1.4px solid rgb(37, 37, 37);
   translate: 0;
@@ -275,15 +290,7 @@ section {
 #contact {
   background-color: rgb(37, 37, 37);
   color: #efefea;
-  height: calc(100vh - 120px);
-  padding: 40px 40px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  & > * {
-    flex: 0 1 440px;
-  }
+  margin-bottom: 0;
 }
 form {
   display: flex;
@@ -291,11 +298,12 @@ form {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: flex-start;
+  padding: 0 20px;
+  max-width: 800px;
 }
 textarea {
   background-color: rgb(37, 37, 37);
   border: 1.4px solid #efefea;
-  border-radius: 11px;
   color: #efefea;
   font-family: "Inter";
   padding: 10px;
@@ -307,7 +315,6 @@ textarea {
 input {
   background-color: rgb(37, 37, 37);
   border: 1.4px solid #efefea;
-  border-radius: 11px;
   color: #efefea;
   font-family: "Inter";
   padding: 10px;
@@ -317,7 +324,6 @@ input {
   background-color: #efefea;
   color: rgb(37, 37, 37);
   border: 1.4px solid #efefea;
-  border-radius: 60px;
   font-family: "Inter";
   font-size: 14px;
   padding: 10px 20px;
@@ -336,15 +342,15 @@ input {
     box-shadow: -2px 2px 0 0 #efefeaaa;
   }
 }
-@media screen and (max-device-width: 812px)  {
-    h1 {
-      font-size: 24px;
-      letter-spacing: normal;
-      font-weight: 300;
-      line-height: 24px;
-    }
-    .card + .card {
-      margin-left: 0;
-    }
+@media screen and (max-device-width: 812px) {
+  h1 {
+    font-size: 24px;
+    letter-spacing: normal;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  .card + .card {
+    margin-left: 0;
+  }
 }
 </style>
