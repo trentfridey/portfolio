@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <div class="section-heading" id="code-samples" style="text-align: right">
-      Code Samples
-    </div>
+  <div id="code">
     <div className="cards">
       <div v-for="(project, idx) in projects" class="card">
         <div class="card-header">
@@ -54,16 +51,6 @@ export default {
 </script>
 
 <style lang="scss">
-#code-samples {
-  display: flex;
-  align-items: center;
-  &::before {
-    content: "";
-    margin: 0 30px;
-    flex: 1;
-    border-bottom: 1px solid var(--black);
-  }
-}
 .cards {
   width: 100%;
   display: flex;
