@@ -53,11 +53,11 @@ export default {
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 1.25s ease;
+  transition: all .700s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-20px);
 }
 </style>

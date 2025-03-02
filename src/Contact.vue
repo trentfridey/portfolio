@@ -1,33 +1,61 @@
 <template>
-  <div class="contact-form">
-    <div class="section-heading">Say Hello</div>
-    <form data-netlify="true" name="contact" method="post">
-      <input name="form-name" type="hidden" value="contact" />
-      <input name="date" type="hidden" :value="Date()" />
-      <div>
-        <div class="input-container">
-          <label for="name">Name</label>
-          <input name="name" />
-        </div>
-        <div class="input-container">
-          <label for="email">Email</label>
-          <input name="email" />
-        </div>
+  <section id="contact">
+    <div class="contact-form">
+      <div class="contact-form-heading">
+        <div>Say Hello</div>
+        <div @click="$emit('return')">⏎</div>
       </div>
-      <textarea placeholder="message" name="message"></textarea>
-      <button class="submit-btn" type="submit">
-      <span>Submit</span>
-      </button>
-    </form>
-  </div>
+      <form data-netlify="true" name="contact" method="post">
+        <input name="form-name" type="hidden" value="contact" />
+        <input name="date" type="hidden" :value="Date()" />
+        <div>
+          <div class="input-container">
+            <label for="name">Name</label>
+            <input name="name" />
+          </div>
+          <div class="input-container">
+            <label for="email">Email</label>
+            <input name="email" />
+          </div>
+        </div>
+        <textarea placeholder="message" name="message"></textarea>
+        <button class="submit-btn" type="submit">
+          <span>Submit</span>
+        </button>
+      </form>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .500s ease-in-out;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(100%);
+}
 #contact {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: var(--black);
   color: var(--white);
-  margin-bottom: 0;
-  margin-top: 50vh;
+  padding: 0 20px 20px 20px;
+}
+.contact-form-heading {
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 88px;
+  letter-spacing: -5px;
+  line-height: 88px;
+  border-top: 1px solid var(--black);
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 form {
   display: flex;
@@ -50,7 +78,6 @@ textarea {
 .input-container {
   margin: 10px 0;
   height: 48px;
-  width: 400px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -78,12 +105,12 @@ input {
   border: 1.4px solid var(--white);
   font-family: "Inter";
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 20px 30px;
   cursor: pointer;
   margin-top: 10px;
   align-self: flex-end;
   font-weight: 800;
-  
+  font-size: 22px;
   background-color: var(--black);
   color: var(--white);
   position: relative;
@@ -95,14 +122,14 @@ input {
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
     background: var(--white);
     height: 100%;
     width: 100%;
     transition: transform 0.3s ease;
   }
-  &:hover::before{
+  &:hover::before {
     transform: translateY(-100%);
   }
 }
