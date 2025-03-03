@@ -160,6 +160,15 @@ h2 {
   right: 30px;
   pointer-events: none;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .700s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
 @media screen and (max-device-width: 812px) {
   h1 {
     font-weight: 800;
