@@ -9,13 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@morev/vue-transitions": "^3.0.5",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "sass": "^1.58.0",
-    "vue": "^3.2.45",
-    "vue-marquee-slider": "^1.0.6",
-    "vue3-marquee": "^4.2.2"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
