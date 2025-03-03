@@ -1,7 +1,15 @@
 <template>
   <Transition name="fade" appear v-show="this.section === 'main'">
     <section id="main">
-      <h1>Trent Fridey</h1>
+      <div class="slideshow">
+        <h1>Trent Fridey</h1>
+        <div id="tag-line">
+        <h2>
+          Developer &amp; Data Scientist
+          <a href="https://linkedin.com/in/trentfridey"> </a>
+        </h2>
+      </div>
+      </div>
       <div>
         <div class="section-heading" id="blog">
           <a class="section-heading-text" href="https://blog.trentfridey.com">Blog</a>
@@ -15,12 +23,7 @@
           >
         </div>
       </div>
-      <div id="tag-line">
-        <h2>
-          Developer &amp; Data Scientist
-          <a href="https://linkedin.com/in/trentfridey"> </a>
-        </h2>
-      </div>
+      
     </section>
   </Transition>
   <Transition name="slide" appear v-show="this.section === 'contact'">
@@ -30,12 +33,9 @@
 
 <script>
 import Contact from "./Contact.vue";
-import Projects from "./Projects.vue";
-import TransitionOnScroll from "./TransitionOnScroll.vue";
-import Header from "./Header.vue";
 export default {
   name: "App",
-  components: { Header, TransitionOnScroll, Projects, Contact },
+  components: { Contact },
   data() {
     return {
       section: "main",
@@ -62,6 +62,33 @@ section {
   flex-direction: column;
   justify-content: space-between;
 }
+.slideshow {
+  flex: 1 0 auto;
+  position: relative;
+}
+.slideshow::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0.3;
+  animation: slideshow 15s ease-in-out infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes slideshow {
+  0% {
+    background-image: url("/coding.gif");
+  }
+  50% {
+    background-image: url("/math.gif");
+  }
+  100% {
+    background-image: url("/inspect.gif");
+  }
+}
 .section-heading {
   color: var(--black);
   flex: none;
@@ -83,48 +110,13 @@ section {
   }
   &:hover {
     .section-heading-text {
+      color: var(--white);
       transform: translateX(20px);
     }
   }
-  &#resume {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: -1;
-      background-image: url(./coding.gif);
-    }
-    &:hover::after {
-      opacity: 0.5;
-    }
-  }
+  &#contact-link,
+  &#resume,
   &#blog {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: -1;
-      background-image: url(./math.gif);
-    }
-    &:hover::after {
-      opacity: 0.5;
-    }
-  }
-  &#contact-link {
     transition: all 0.5s ease;
     border-bottom: 1px solid var(--black);
     &:hover {
