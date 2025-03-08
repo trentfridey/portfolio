@@ -2,13 +2,13 @@
   <section id="contact">
     <div class="contact-form">
       <div class="contact-form-heading">
-        <div>Say Hello</div>
-        <div @click="$emit('return')">⏎</div>
+        <div></div>
+        <div @click="$emit('return')">×</div>
       </div>
       <form data-netlify="true" name="contact" method="post">
         <input name="form-name" type="hidden" value="contact" />
         <input name="date" type="hidden" :value="Date()" />
-        <div>
+        <div class="contact-info">
           <div class="input-container">
             <label for="name">Name</label>
             <input name="name" />
@@ -131,6 +131,17 @@ input {
   }
   &:hover::before {
     transform: translateY(-100%);
+  }
+}
+@media screen and (max-device-width: 812px) {
+  .contact-info {
+    width: 100%;
+  }
+  .input-container {
+    width: 100%;
+  }
+  .submit-btn {
+    width: 100%;
   }
 }
 </style>
